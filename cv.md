@@ -1,20 +1,21 @@
 ## Utbildning
 
-### *aug. 2008-jan. 2014* **Civilingenjör i datateknik**, Lunds tekniska högskola, Lund
+### *aug. 2008-jan. 2014* Civilingenjör i datateknik, Lunds tekniska högskola, Lund
+
 Inriktning programvara.
 
-### *aug. 2005-jun. 2008* **Elprogrammet**, NTI-gymnasiet, Malmö
+### *aug. 2005-jun. 2008* Elprogrammet, NTI-gymnasiet, Malmö
 
 ## Arbetslivserfarenhet
 
-### *apr. 2014-aug. 2017* **Systemutvecklare/konsult**, Eurostep AB, Göteborg
+### *apr. 2014-aug. 2017* Systemutvecklare/konsult, Eurostep AB, Göteborg
 
 Jag arbetar med att skräddarsy företagets PLM-plattform Share-A-space för olika kunder.
 Plattformen är skriven i C\# med gränssnitt som använder sig av ramverk/bibliotek så som ASP.NET MVC, jQuery och Knockout.
 Anpassningarna görs i form av integrationer mot andra system, samt affärslogik och webbgränssnitt för att stödja kundens arbete.
 Kundbesök är regelbundet förekommande.
 
-### *jun. 2012-mar. 2014* **Systemutvecklare**, 4IT AB, Lund
+### *jun. 2012-mar. 2014* Systemutvecklare, 4IT AB, Lund
 
 Nyutveckling och underhåll av beslutsstödjande BI- och HR-system.
 Produkterna byggdes i C\# som webbapplikationer.
@@ -33,9 +34,13 @@ Titeln på examensarbetet var *Reaching Software Development Maturity with Conti
 
 ## Språkkunskaper
 
-### **Svenska** Modersmål.
+### Svenska
 
-### **Engelska** Förstår och talar flytande.
+Modersmål.
+
+### Engelska
+
+Förstår och talar flytande.
 
 ## Kompetenser
 
