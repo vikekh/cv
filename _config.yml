@@ -1,1 +1,4 @@
+kramdown:
+  input: kramdown
+  hard_wrap: false
 theme: jekyll-theme-slate
