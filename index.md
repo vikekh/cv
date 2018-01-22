@@ -7,9 +7,9 @@ layout: cv
 
 ## Utbildning
 
-### *aug. 2008-jan. 2014* Civilingenjör i datateknik, Lunds tekniska högskola, Lund
+*aug. 2008-jan. 2014* **Civilingenjör i datateknik**, Lunds tekniska högskola, Lund
 
-Inriktning programvara.
+: Inriktning programvara.
 
 ### *aug. 2005-jun. 2008* Elprogrammet, NTI-gymnasiet, Malmö
 
