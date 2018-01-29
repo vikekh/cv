@@ -1,6 +1,6 @@
 ---
 title: CV
-layout: cv
+layout: minimal
 ---
 
 # Viktor Ekholm
