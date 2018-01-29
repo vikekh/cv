@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Vikekh.CV.Api</AssemblyName>
+    <RootNamespace>Vikekh.CV.Api</RootNamespace>
+    <UserSecretsId>e1589dcf-3ce2-4d9a-ad6e-c39f08a39804</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

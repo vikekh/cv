@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Vikekh.CV.WebApi
+namespace Vikekh.CV.Api
 {
     public class Startup
     {
