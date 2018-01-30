@@ -17,7 +17,7 @@ layout: minimal
 
 *apr. 2014-aug. 2017* **Systemutvecklare/konsult**, Eurostep AB, Göteborg.
 
-*jun. 2012-mar. 2014* **Systemutvecklare**, 4IT AB, Lund.
+*jun. 2012-mar. 2014* **Systemutvecklare**, 4IT AB, Lund. Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C\#, ASP.NET MVC och jQuery, bl.a.
 
 *jan. 2014-feb. 2014* **Laborationshandledare**, Lunds tekniska högskola, Lund.
 
