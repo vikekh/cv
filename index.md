@@ -1,8 +1,3 @@
----
-title: CV
-layout: minimal
----
-
 # Viktor Ekholm
 
 ## Utbildning
