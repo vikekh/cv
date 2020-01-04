@@ -1,7 +1,8 @@
 <h2>Utbildning</h2>
 
 <ul>
-    {% for item in site.data.education %}
+    {% assign items = site.data.education | sort: 'from' | reverse %}
+    {% for item in items %}
         <li>
             <h3>{{ item.title }} - {{ item.school }}, {{ item.location }}</h3>
             {{ item.description | markdownify }}

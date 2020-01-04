@@ -1,7 +1,8 @@
 <h2>Erfarenhet</h2>
 
 <ul>
-    {% for item in site.data.experience %}
+    {% assign items = site.data.experience | sort: 'from' | reverse %}
+    {% for item in items %}
         <li>
             <h3>{{ item.title }} - {{ item.company }}, {{ item.location }}</h3>
             {{ item.description | markdownify }}
