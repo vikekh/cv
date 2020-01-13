@@ -1,0 +1,8 @@
+<h2>Språkkunskaper</h2>
+<dl class="row">
+    {% assign items = site.data.language %}
+    {% for item in items %}
+        <dt class="col-2">{{ item.name }}</dt>
+        <dd class="col-10">{{ item.description | markdownify }}</dd>
+    {% endfor %}
+</dl>

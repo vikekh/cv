@@ -1,11 +1,11 @@
 <h2>Utbildning</h2>
-
-<ul>
+<dl class="row">
     {% assign items = site.data.education | sort: 'from' | reverse %}
     {% for item in items %}
-        <li>
-            <h3>{{ item.title }} - {{ item.school }}, {{ item.location }}</h3>
+        <dt class="col-2">{{ item.from | date: '%Y' }}-{{ item.to | date: '%Y' }}</dt>
+        <dd class="col-10">
+            <p><strong>{{ item.title }}</strong>, {{ item.school }}, {{ item.location }}</p>
             {{ item.description | markdownify }}
-        </li>
+        </dt>
     {% endfor %}
-</ul>
+</dl>
