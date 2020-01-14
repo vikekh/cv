@@ -1,0 +1,20 @@
+name: "Viktor Ekholm"
+# label:
+# image:
+# email:
+# phone:
+# url:
+# summary:
+# location:
+  # address:
+  # postalCode:
+  # city:
+  # countryCode:
+  # region:
+profiles:
+  - network: GitHub
+    username: vikekh
+    url: https://github.com/vikekh
+  - network: LinkedIn
+    # username:
+    url: https://linkedin.com/in/viktorekholm

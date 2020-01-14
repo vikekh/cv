@@ -2,10 +2,10 @@
 <dl class="row">
     {% assign items = site.data.education | sort: 'from' | reverse %}
     {% for item in items %}
-        <dt class="col-2">{{ item.from | date: '%Y' }}-{{ item.to | date: '%Y' }}</dt>
+        <dt class="col-2">{{ item.startDate | date: '%Y' }}-{{ item.endDate | date: '%Y' }}</dt>
         <dd class="col-10">
-            <p><strong>{{ item.title }}</strong>, {{ item.school }}, {{ item.location }}</p>
-            {{ item.description | markdownify }}
+            <p><strong>{{ item.studyType }}</strong>, {{ item.institution }}</p>
+            {{ item.area }}
         </dt>
     {% endfor %}
 </dl>

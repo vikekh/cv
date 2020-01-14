@@ -1,12 +1,14 @@
-- title: Elprogrammet
-  school: NTI-gymnasiet
-  location: Malmö
-  from: 2005-08-22
-  to: 2008-06-06
-- title: Civilingenjör datateknik
-  school: Lunds tekniska högskola
-  location: Lund
-  from: 2008-08-25
-  to: 2014-01-01
-  description: >
-    Inriktning programvara.
+- institution: NTI-gymnasiet, Malmö
+  # area:
+  studyType: Elprogrammet
+  startDate: 2005-08-22
+  endDate: 2008-06-06
+  # gpa:
+  # courses:
+- institution: Lunds tekniska högskola
+  # area:
+  studyType: Civilingenjör datateknik
+  startDate: 2008-08-25
+  endDate: 2014-01-01
+  # gpa:
+  # courses:

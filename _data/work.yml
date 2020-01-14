@@ -1,0 +1,49 @@
+- name: 4IT AB
+  location: Lund
+  # description:
+  position: Systemutvecklare
+  # url:
+  startDate: 2012-06-01
+  endDate: 2014-03-31
+  summary: >
+    Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a.
+    Viss kundkontakt var förekommande.
+  # highlights:
+- name: Softhouse Consulting Öresund AB
+  location: Malmö
+  # description:
+  position: Examensarbete
+  # url:
+  startDate: 2013-01-01
+  endDate: 2013-08-31
+  # summary:
+  # highlights:
+- name: Lunds tekniska högskola
+  location: Lund
+  # description:
+  position: Laborationshandledare
+  # url:
+  startDate: 2014-01-01
+  endDate: 2014-03-31
+  # summary:
+  # highlights:
+- name: Eurostep AB
+  location: Göteborg
+  # description:
+  position: Systemutvecklare/konsult
+  # url:
+  startDate: 2014-04-01
+  endDate: 2017-07-31
+  summary: >
+    Arbetade som konsult in-house mot ett flertal företag på olika orter för att implementera en anpassad version av företagets PLM-produkt ShareAspace enligt kundens önskemål.
+    Arbetade med C#, ASP.NET MVC, JavaScript, jQuery, KnockoutJS och MSSQL.
+  # highlights:
+- name: iCore Solutions AB
+  location: Göteborg
+  # description:
+  position: Systemutvecklare
+  # url:
+  startDate: 2017-08-01
+  # endDate:
+  # summary:
+  # highlights:
