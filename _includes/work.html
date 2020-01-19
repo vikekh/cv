@@ -1,4 +1,5 @@
 <h2>Erfarenhet</h2>
+
 <dl class="row">
     {% assign items = site.data.work | sort: 'from' | reverse %}
     {% for item in items %}
@@ -6,6 +7,13 @@
         <dd class="col-10">
             <p><strong>{{ item.position }}</strong>, {{ item.name }}, {{ item.location }}</p>
             {{ item.summary | markdownify }}
+            {% if item.highlights and item.highlights.size > 0 %}
+                <ul>
+                    {% for highlight in item.highlights %}
+                        <li>{{ highlight }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </dd>
     {% endfor %}
 </dl>
