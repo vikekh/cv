@@ -1,14 +1,14 @@
 name: "Viktor Ekholm"
 # label:
-# image:
-# email:
-# phone:
+image: /images/viktor.jpg
+email: 621212+vikekh@users.noreply.github.com
+phone: 08-400 27 779
 # url:
 # summary:
-# location:
-  # address:
-  # postalCode:
-  # city:
+location:
+  address: Paradisäppelvägen 111
+  postalCode: 123 45
+  city: Ankeborg
   # countryCode:
   # region:
 profiles:
@@ -16,5 +16,5 @@ profiles:
     username: vikekh
     url: https://github.com/vikekh
   - network: LinkedIn
-    # username:
+    username: viktorekholm
     url: https://linkedin.com/in/viktorekholm
