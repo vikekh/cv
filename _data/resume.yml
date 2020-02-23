@@ -1,0 +1,131 @@
+basics:
+  name: "Viktor Ekholm"
+  # label:
+  image: /images/viktor.jpg
+  email: 621212+vikekh@users.noreply.github.com
+  phone: 08-400 27 779
+  # url:
+  # summary:
+  location:
+    address: Paradisäppelvägen 111
+    postalCode: 123 45
+    city: Ankeborg
+    # countryCode:
+    # region:
+  profiles:
+    - network: GitHub
+      username: vikekh
+      url: https://github.com/vikekh
+    - network: LinkedIn
+      username: viktorekholm
+      url: https://linkedin.com/in/viktorekholm
+
+work:
+  - name: 4IT AB
+    location: Lund
+    # description:
+    position: Systemutvecklare
+    # url:
+    startDate: 2012-06-01
+    endDate: 2014-03-31
+    summary: >
+      Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a.
+      Viss kundkontakt var förekommande.
+    # highlights:
+  - name: Softhouse Consulting Öresund AB
+    location: Malmö
+    # description:
+    position: Examensarbete
+    # url:
+    startDate: 2013-01-01
+    endDate: 2013-08-31
+    # summary:
+    # highlights:
+  - name: Lunds tekniska högskola
+    location: Lund
+    # description:
+    position: Laborationshandledare
+    # url:
+    startDate: 2014-01-01
+    endDate: 2014-03-31
+    # summary:
+    # highlights:
+  - name: Eurostep AB
+    location: Göteborg
+    # description:
+    position: Systemutvecklare/konsult
+    # url:
+    startDate: 2014-04-01
+    endDate: 2017-07-31
+    summary: >
+      Arbetade som konsult in-house mot ett flertal företag på olika orter för att implementera en anpassad version av företagets PLM-produkt ShareAspace enligt kundens önskemål.
+      Arbetade med C#, ASP.NET MVC, JavaScript, jQuery, KnockoutJS och MSSQL.
+    # highlights:
+  - name: iCore Solutions AB
+    location: Göteborg
+    # description:
+    position: Systemutvecklare
+    # url:
+    startDate: 2017-08-01
+    # endDate:
+    # summary:
+    # highlights:
+
+education:
+  - institution: NTI-gymnasiet, Malmö
+    # area:
+    studyType: Elprogrammet
+    startDate: 2005-08-22
+    endDate: 2008-06-06
+    # gpa:
+    # courses:
+  - institution: Lunds tekniska högskola
+    # area:
+    studyType: Civilingenjör datateknik
+    startDate: 2008-08-25
+    endDate: 2014-01-01
+    # gpa:
+    # courses:
+
+skills:
+  - name: Programmeringsspråk
+    # level:
+    keywords:
+      - C#
+      - JavaScript
+      - TypeScript
+      - SQL
+      - Java
+      - C++
+      - PHP
+  - name: Ramverk/bibliotek
+    # level:
+    keywords:
+      - ASP.NET
+      - ASP.NET Core
+      - ASP.NET MVC
+      - jQuery
+      - Backbone.js
+      - Knockout
+  - name: Övrigt
+    # level:
+    keywords:
+      - Git
+      - TFS
+      - Subversion
+      - Windows
+      - Linux (Ubuntu)
+      - MSSQL
+      - MySQL
+      - Azure DevOps
+      - Jenkins
+      - Scrum
+      - Docker
+      - CI/CD
+      - HTML/CSS
+
+languages:
+  - name: Svenska
+    fluency: Modersmål.
+  - name: Engelska
+    fluency: Förstår och talar flytande.
