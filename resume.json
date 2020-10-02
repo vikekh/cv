@@ -1,0 +1,129 @@
+{
+	"basics": {
+		"name": "Viktor Ekholm",
+		"image": "/images/viktor.jpg",
+		"email": "621212+vikekh@users.noreply.github.com",
+		"phone": "08-400 27 779",
+		"location": null,
+		"address": "Paradisäppelvägen 111",
+		"postalCode": "123 45",
+		"city": "Ankeborg",
+		"profiles": [
+			{
+				"network": "GitHub",
+				"username": "vikekh",
+				"url": "https://github.com/vikekh"
+			},
+			{
+				"network": "LinkedIn",
+				"username": "viktorekholm",
+				"url": "https://linkedin.com/in/viktorekholm"
+			}
+		]
+	},
+	"languages": [
+		{
+			"name": "Svenska",
+			"fluency": "Modersmål."
+		},
+		{
+			"name": "Engelska",
+			"fluency": "Förstår och talar flytande."
+		}
+	],
+	"education": [
+		{
+			"institution": "NTI-gymnasiet, Malmö",
+			"studyType": "Elprogrammet",
+			"startDate": "2005-08-22T00:00:00.000Z",
+			"endDate": "2008-06-06T00:00:00.000Z"
+		},
+		{
+			"institution": "Lunds tekniska högskola",
+			"studyType": "Civilingenjör datateknik",
+			"startDate": "2008-08-25T00:00:00.000Z",
+			"endDate": "2014-01-01T00:00:00.000Z"
+		}
+	],
+	"skills": [
+		{
+			"name": "Programmeringsspråk",
+			"keywords": [
+				"C#",
+				"JavaScript",
+				"TypeScript",
+				"SQL",
+				"Java",
+				"C++",
+				"PHP"
+			]
+		},
+		{
+			"name": "Ramverk/bibliotek",
+			"keywords": [
+				"ASP.NET",
+				"ASP.NET Core",
+				"ASP.NET MVC",
+				"jQuery",
+				"Backbone.js",
+				"Knockout"
+			]
+		},
+		{
+			"name": "Övrigt",
+			"keywords": [
+				"Git",
+				"TFS",
+				"Subversion",
+				"Windows",
+				"Linux (Ubuntu)",
+				"MSSQL",
+				"MySQL",
+				"Azure DevOps",
+				"Jenkins",
+				"Scrum",
+				"Docker",
+				"CI/CD",
+				"HTML/CSS"
+			]
+		}
+	],
+	"work": [
+		{
+			"name": "4IT AB",
+			"location": "Lund",
+			"position": "Systemutvecklare",
+			"startDate": "2012-06-01T00:00:00.000Z",
+			"endDate": "2014-03-31T00:00:00.000Z",
+			"summary": "Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a. Viss kundkontakt var förekommande.\n"
+		},
+		{
+			"name": "Lunds tekniska högskola",
+			"location": "Lund",
+			"position": "Laborationshandledare",
+			"startDate": "2014-01-01T00:00:00.000Z",
+			"endDate": "2014-03-31T00:00:00.000Z"
+		},
+		{
+			"name": "Softhouse Consulting Öresund AB",
+			"location": "Malmö",
+			"position": "Examensarbete",
+			"startDate": "2013-01-01T00:00:00.000Z",
+			"endDate": "2013-08-31T00:00:00.000Z"
+		},
+		{
+			"name": "iCore Solutions AB",
+			"location": "Göteborg",
+			"position": "Systemutvecklare",
+			"startDate": "2017-08-01T00:00:00.000Z"
+		},
+		{
+			"name": "Eurostep AB",
+			"location": "Göteborg",
+			"position": "Systemutvecklare/konsult",
+			"startDate": "2014-04-01T00:00:00.000Z",
+			"endDate": "2017-07-31T00:00:00.000Z",
+			"summary": "Arbetade som konsult in-house mot ett flertal företag på olika orter för att implementera en anpassad version av företagets PLM-produkt ShareAspace enligt kundens önskemål. Arbetade med C#, ASP.NET MVC, JavaScript, jQuery, KnockoutJS och MSSQL.\n"
+		}
+	]
+}
