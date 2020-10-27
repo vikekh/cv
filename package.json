@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "CV\r ==",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "jsonresume-theme-onepage": "0.0.3",
+    "jsonresume-theme-print-flexbox": "^1.0.0"
+  },
   "devDependencies": {
     "resume-cli": "^2.0.0",
     "yaml-folder-2-jsonresume": "^1.1.1"
