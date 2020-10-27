@@ -1,8 +1,0 @@
-<h2>Språkkunskaper</h2>
-<dl class="row">
-    {% assign items = site.data.languages %}
-    {% for item in items %}
-        <dt class="col-2">{{ item.language }}</dt>
-        <dd class="col-10">{{ item.fluency | markdownify }}</dd>
-    {% endfor %}
-</dl>
