@@ -6,6 +6,8 @@ position: Systemutvecklare/konsult
 startDate: 2014-04-01
 endDate: 2017-07-31
 summary: >
-  Arbetade som konsult in-house mot ett flertal företag på olika orter för att implementera en anpassad version av företagets PLM-produkt ShareAspace enligt kundens önskemål.
-  Arbetade med C#, ASP.NET MVC, JavaScript, jQuery, KnockoutJS och MSSQL.
+  Jag arbetade som konsult in-house mot ett flertal kunder, vissa på annan ort och vissa i utlandet.
+  Min huvudsakliga arbetsuppgift var att implementera en anpassad version av vår egen webbaserade PLM-produkt ShareAspace efter kundens behov.
+  I mitt arbete använde jag mig av bl.a. C#, ASP.NET, MSSQL, JavaScript och jQuery.
+  Arbetet bestod av t.ex. att översätta kundens domän enligt vår PLM-baserade databasmodell, utveckla nya funktioner (applikation och gränssnitt), skriva funktioner för import, export och rapportering, samt integrationer mot andra system.
 # highlights:

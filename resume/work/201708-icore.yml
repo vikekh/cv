@@ -5,5 +5,9 @@ position: Systemutvecklare
 # url:
 startDate: 2017-08-01
 # endDate:
-# summary:
+summary: >
+  Jag arbetar som systemutvecklare och team lead i ett agilt team som utvecklar och underhåller en webbapplikation.
+  Produkten som företaget tillhandahåller är en integrationsplattform och webbapplikationen som jag och mitt team arbetar med är det primära verktyget för kunden att hantera sina integrationer.
+  Arbetet sker i Visual Studio med bl.a. C# och ASP.NET, och TypeScript och Backbone.js för klientapplikationen.
+  Jag har också arbetat med att vidareutveckla våra externa webbapplikationer, bl.a. genom att implementera OpenID Connect-autentisering via Azure AD B2C.
 # highlights:
