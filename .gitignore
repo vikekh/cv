@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/jekyll,aspnetcore,visualstudio,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=jekyll,aspnetcore,visualstudio,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,aspnetcore,visualstudio,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,aspnetcore,visualstudio,visualstudiocode
 
 ### ASPNETCore ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -272,10 +272,14 @@ __pycache__/
 # Cake - Uncomment if you are using it
 # tools/
 
-### Jekyll ###
-_site/
-.jekyll-cache/
-.jekyll-metadata
+### DotnetCore ###
+# .NET Core build folders
+bin/
+obj/
+
+# Common node modules locations
+/node_modules
+/wwwroot/node_modules
 
 ### VisualStudioCode ###
 .vscode/*
@@ -283,10 +287,12 @@ _site/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+*.code-workspace
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+.ionide
 
 ### VisualStudio ###
 ##
@@ -303,6 +309,7 @@ mono_crash.*
 # Build results
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
+[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
 # Uncomment if you have tasks that create the project's static files in wwwroot
@@ -346,8 +353,6 @@ StyleCopReport.xml
 
 # ReSharper is a .NET coding add-in
 
-# JustCode is a .NET coding add-in
-
 # TeamCity is a build add-in
 
 # DotCover is a Code Coverage Tool
@@ -355,6 +360,9 @@ StyleCopReport.xml
 # AxoCover is a Code Coverage Tool
 .axoCover/*
 !.axoCover/settings.json
+
+# Coverlet is a free, cross platform Code Coverage Tool
+coverage*[.json, .xml, .info]
 
 # Visual Studio code coverage results
 
@@ -493,4 +501,7 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-# End of https://www.gitignore.io/api/jekyll,aspnetcore,visualstudio,visualstudiocode
+# Ionide (cross platform F# VS Code tools) working folder
+.ionide/
+
+# End of https://www.toptal.com/developers/gitignore/api/dotnetcore,aspnetcore,visualstudio,visualstudiocode
