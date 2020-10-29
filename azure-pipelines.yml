@@ -2,7 +2,7 @@
 
 name: CI
 trigger:
-  - master
+  - dev
 
 pool:
   vmImage: 'ubuntu-latest'
