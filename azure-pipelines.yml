@@ -17,7 +17,8 @@ stages:
               containerRegistry: 'Docker Hub'
               repository: 'vikekh/cv'
               command: 'build'
-              Dockerfile: '**/Dockerfile'
+              Dockerfile: './src/Vikekh.Cv.Web/Dockerfile'
+              buildContext: '$(Build.Repository.LocalPath)'
               tags: |
                 $(Build.BuildId)
                 latest
