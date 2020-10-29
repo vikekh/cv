@@ -20,7 +20,7 @@ stages:
               Dockerfile: './src/Vikekh.Cv.Web/Dockerfile'
               buildContext: '$(Build.Repository.LocalPath)'
               tags: |
-                $(Build.BuildId)
+                # $(Build.BuildId)
                 latest
           - task: Docker@2
             inputs:
