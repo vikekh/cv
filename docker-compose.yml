@@ -2,7 +2,4 @@ version: '3.4'
 
 services:
   web:
-    image: ${DOCKER_REGISTRY-}cv
-    build:
-      context: .
-      dockerfile: src/Vikekh.Cv.Web/Dockerfile
+    image: vikekh/cv

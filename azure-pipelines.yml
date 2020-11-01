@@ -12,7 +12,7 @@ stages:
     jobs:
       - job: 'Build'
         steps:
-          - task: 'Docker@2'
+          - task: Docker@2
             inputs:
               containerRegistry: 'Docker Hub'
               repository: 'vikekh/cv'
@@ -26,3 +26,13 @@ stages:
               repository: 'vikekh/cv'
               command: 'push'
               tags: latest
+  - stage: 'Deploy'
+    jobs:
+      - job: 'Deploy'
+        steps:
+          - task: AzureWebAppContainer@1
+            inputs:
+              azureSubscription: $(AzureSubscription)
+              appName: $(AzureAppName)
+              containers: 'vikekh/cv:latest'
+              multicontainerConfigFile: './docker-compose.prod.yml'
