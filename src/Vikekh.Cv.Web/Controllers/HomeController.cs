@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Vikekh.Cv.Web.Models;
+using Vikekh.Cv.Web.Repositories;
 
 namespace Vikekh.Cv.Web.Controllers
 {
@@ -20,6 +21,9 @@ namespace Vikekh.Cv.Web.Controllers
 
 		public IActionResult Index()
 		{
+            var fileRepository = new FileRepository();
+            fileRepository.GetBasicsAsync();
+
 			return View();
 		}
 
