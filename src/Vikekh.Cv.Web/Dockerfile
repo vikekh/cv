@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["src/Vikekh.Cv.Web/Vikekh.Cv.Web.csproj", "src/Vikekh.Cv.Web/"]
-RUN dotnet restore "src/Vikekh.Cv.Web/Vikekh.Cv.Web.csproj"
+COPY ["src/Vikekh.Cv.Web/Vikekh.Cv.Web.csproj", "Vikekh.Cv.Web/"]
+RUN dotnet restore "Vikekh.Cv.Web/Vikekh.Cv.Web.csproj"
 COPY . .
-WORKDIR "/src/src/Vikekh.Cv.Web"
+WORKDIR "src/Vikekh.Cv.Web"
 RUN dotnet build "Vikekh.Cv.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
