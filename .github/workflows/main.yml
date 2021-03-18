@@ -40,3 +40,15 @@ jobs:
           file: ./src/Vikekh.Cv.Web/Dockerfile
           push: true
           tags: vikekh/cv:latest
+          
+      - name: Azure authentication
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          
+      - name: 'Deploy to Azure Web App for Container'
+        uses: azure/webapps-deploy@v2
+        with: 
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          #images: ${{ env.CONTAINER_REGISTRY }}/nodejsapp:${{ github.sha }}
+          configuration-file: ./docker-compose.yml
