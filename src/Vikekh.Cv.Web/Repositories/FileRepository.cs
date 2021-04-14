@@ -13,7 +13,7 @@ namespace Vikekh.Cv.Web.Repositories
     {
         public async Task<Basics> GetBasicsAsync()
         {
-            using (var reader = File.OpenText("/data/basics.yml"))
+            using (var reader = File.OpenText(@"..\..\data\basics.yml"))
             {
                 var yaml = await reader.ReadToEndAsync();
                 var deserializer = new DeserializerBuilder()
