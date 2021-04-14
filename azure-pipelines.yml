@@ -32,7 +32,6 @@ stages:
         steps:
           - task: AzureWebAppContainer@1
             inputs:
-              azureSubscription: $(AzureSubscription)
-              appName: $(AzureAppName)
-              containers: 'vikekh/cv:latest'
+              azureSubscription: '$(AzureSubscription)'
+              appName: '$(AzureAppName)'
               multicontainerConfigFile: './docker-compose.prod.yml'
