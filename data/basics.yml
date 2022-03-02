@@ -5,12 +5,12 @@ email: 621212+vikekh@users.noreply.github.com
 phone: 08-400 27 779
 # url:
 # summary:
-#location:
-address: Paradisäppelvägen 111
-postalCode: 123 45
-city: Ankeborg
-# countryCode:
-# region:
+location:
+  address: Paradisäppelvägen 111
+  postalCode: 123 45
+  city: Ankeborg
+  # countryCode:
+  # region:
 profiles:
   - network: GitHub
     username: vikekh
