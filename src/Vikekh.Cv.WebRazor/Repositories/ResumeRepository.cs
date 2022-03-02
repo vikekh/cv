@@ -25,6 +25,20 @@ public class ResumeRepository
             var educationDtos = GetFiles(Path.Combine(_dataDirectory, "education")).Select(s => DeserializeFile<EducationDto>(s));
             var skillsDtos = GetFiles(Path.Combine(_dataDirectory, "skills")).Select(s => DeserializeFile<SkillsDto>(s));
             var languageDtos = DeserializeFile<IEnumerable<LanguageDto>>(Path.Combine(_dataDirectory, "languages.yml"));
+
+            var dictionary = new Dictionary<string, object>();
+            dictionary.Add("basics", basicsDto);
+            dictionary.Add("work", workDtos);
+            dictionary.Add("education", educationDtos);
+            dictionary.Add("skills", skillsDtos);
+            dictionary.Add("languages", languageDtos);
+
+            var serializer = new SerializerBuilder()
+                .JsonCompatible()
+                .Build();
+
+            var json = serializer.Serialize(dictionary);
+            File.WriteAllText(@"..\..\resume.json", json);
         }
         catch (Exception ex)
         {
