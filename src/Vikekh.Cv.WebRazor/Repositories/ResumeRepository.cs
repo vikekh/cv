@@ -1,4 +1,8 @@
-﻿using Vikekh.Cv.WebRazor.Dtos;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
+using Newtonsoft.Json.Serialization;
+using Vikekh.Cv.WebRazor.Dtos;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -16,7 +20,23 @@ public class ResumeRepository
             .Build();
     }
 
-    public void GetResume()
+    public void Get()
+    {
+        try
+        {
+            var basicsDto = DeserializeFile<BasicsDto>(Path.Combine(_dataDirectory, "basics.yml"));
+            var workDtos = GetFiles(Path.Combine(_dataDirectory, "work")).Select(s => DeserializeFile<WorkDto>(s));
+            var educationDtos = GetFiles(Path.Combine(_dataDirectory, "education")).Select(s => DeserializeFile<EducationDto>(s));
+            var skillsDtos = GetFiles(Path.Combine(_dataDirectory, "skills")).Select(s => DeserializeFile<SkillsDto>(s));
+            var languageDtos = DeserializeFile<IEnumerable<LanguageDto>>(Path.Combine(_dataDirectory, "languages.yml"));
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Exception thrown.", ex);
+        }
+    }
+
+    public void WriteToJson()
     {
         try
         {
@@ -33,12 +53,26 @@ public class ResumeRepository
             dictionary.Add("skills", skillsDtos);
             dictionary.Add("languages", languageDtos);
 
-            var serializer = new SerializerBuilder()
-                .JsonCompatible()
-                .Build();
+            JsonSerializer serializer = new JsonSerializer();
+            serializer.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            serializer.Formatting = Formatting.Indented;
+            //serializer.Converters.Add(new JavaScriptDateTimeConverter());
+            serializer.NullValueHandling = NullValueHandling.Ignore;
 
-            var json = serializer.Serialize(dictionary);
-            File.WriteAllText(@"..\..\resume.json", json);
+            using (StreamWriter sw = new StreamWriter(@"..\..\resume.json"))
+            using (JsonWriter writer = new JsonTextWriter(sw))
+            {
+                serializer.Serialize(writer, dictionary);
+                // {"ExpiryDate":new Date(1230375600000),"Price":0}
+            }
+
+            var json = File.ReadAllText(@"..\..\resume.json");
+            var schemaJson = File.ReadAllText(@"..\..\schema.json");
+            JsonSchema schema = JsonSchema.Parse(schemaJson);
+
+            JObject person = JObject.Parse(json);
+            IList<string> messages;
+            bool valid = person.IsValid(schema, out messages);
         }
         catch (Exception ex)
         {

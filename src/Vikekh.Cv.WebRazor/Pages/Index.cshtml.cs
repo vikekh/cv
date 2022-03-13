@@ -11,7 +11,7 @@ namespace Vikekh.Cv.WebRazor.Pages
         public IndexModel(ILogger<IndexModel> logger, ResumeRepository resumeRepository)
         {
             _logger = logger;
-            resumeRepository.GetResume();
+            resumeRepository.WriteToJson();
         }
 
         public void OnGet()

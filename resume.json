@@ -1,1 +1,131 @@
-{"basics": {"Email": "621212+vikekh@users.noreply.github.com", "Image": {"AbsolutePath": "/images/viktor.jpg", "AbsoluteUri": "https://vikekh.com/images/viktor.jpg", "LocalPath": "/images/viktor.jpg", "Authority": "vikekh.com", "HostNameType": "Dns", "IsDefaultPort": true, "IsFile": false, "IsLoopback": false, "PathAndQuery": "/images/viktor.jpg", "Segments": ["/", "images/", "viktor.jpg"], "IsUnc": false, "Host": "vikekh.com", "Port": 443, "Query": "", "Fragment": "", "Scheme": "https", "OriginalString": "https://vikekh.com/images/viktor.jpg", "DnsSafeHost": "vikekh.com", "IdnHost": "vikekh.com", "IsAbsoluteUri": true, "UserEscaped": false, "UserInfo": ""}, "Label": null, "Location": {"Address": "Paradisäppelvägen 111", "City": "Ankeborg", "CountryCode": null, "PostalCode": "123 45", "Region": null}, "Name": "Viktor Ekholm", "Phone": "08-400 27 779", "Profiles": [{"Network": "GitHub", "Url": {"AbsolutePath": "/vikekh", "AbsoluteUri": "https://github.com/vikekh", "LocalPath": "/vikekh", "Authority": "github.com", "HostNameType": "Dns", "IsDefaultPort": true, "IsFile": false, "IsLoopback": false, "PathAndQuery": "/vikekh", "Segments": ["/", "vikekh"], "IsUnc": false, "Host": "github.com", "Port": 443, "Query": "", "Fragment": "", "Scheme": "https", "OriginalString": "https://github.com/vikekh", "DnsSafeHost": "github.com", "IdnHost": "github.com", "IsAbsoluteUri": true, "UserEscaped": false, "UserInfo": ""}, "Username": "vikekh"}, {"Network": "LinkedIn", "Url": {"AbsolutePath": "/in/viktorekholm", "AbsoluteUri": "https://linkedin.com/in/viktorekholm", "LocalPath": "/in/viktorekholm", "Authority": "linkedin.com", "HostNameType": "Dns", "IsDefaultPort": true, "IsFile": false, "IsLoopback": false, "PathAndQuery": "/in/viktorekholm", "Segments": ["/", "in/", "viktorekholm"], "IsUnc": false, "Host": "linkedin.com", "Port": 443, "Query": "", "Fragment": "", "Scheme": "https", "OriginalString": "https://linkedin.com/in/viktorekholm", "DnsSafeHost": "linkedin.com", "IdnHost": "linkedin.com", "IsAbsoluteUri": true, "UserEscaped": false, "UserInfo": ""}, "Username": "viktorekholm"}], "Summary": null, "Url": null}, "work": [{"Description": null, "EndDate": '2014-03-31T00:00:00.0000000', "Highlights": null, "Location": "Lund", "Name": "4IT AB", "Position": "Systemutvecklare", "StartDate": '2012-06-01T00:00:00.0000000', "Summary": "\nArbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a. Viss kundkontakt var förekommande.\n", "Url": null}, {"Description": null, "EndDate": '2013-08-31T00:00:00.0000000', "Highlights": null, "Location": "Malmö", "Name": "Softhouse Consulting Öresund AB", "Position": "Examensarbete", "StartDate": '2013-01-01T00:00:00.0000000', "Summary": null, "Url": null}, {"Description": null, "EndDate": '2014-03-31T00:00:00.0000000', "Highlights": null, "Location": "Lund", "Name": "Lunds tekniska högskola", "Position": "Laborationshandledare", "StartDate": '2014-01-01T00:00:00.0000000', "Summary": null, "Url": null}, {"Description": null, "EndDate": '2017-07-31T00:00:00.0000000', "Highlights": null, "Location": "Göteborg", "Name": "Eurostep AB", "Position": "Systemutvecklare/konsult", "StartDate": '2014-04-01T00:00:00.0000000', "Summary": "Jag arbetade som konsult in-house mot ett flertal kunder, vissa på annan ort och vissa i utlandet. Min huvudsakliga arbetsuppgift var att implementera en anpassad version av vår egen webbaserade PLM-produkt ShareAspace efter kundens behov. I mitt arbete använde jag mig av bl.a. C#, ASP.NET, MSSQL, JavaScript och jQuery. Arbetet bestod av t.ex. att översätta kundens domän enligt vår PLM-baserade databasmodell, utveckla nya funktioner (applikation och gränssnitt), skriva funktioner för import, export och rapportering, samt integrationer mot andra system.\n", "Url": null}, {"Description": null, "EndDate": null, "Highlights": null, "Location": "Göteborg", "Name": "iCore Solutions AB", "Position": "Systemutvecklare", "StartDate": '2017-08-01T00:00:00.0000000', "Summary": "Jag arbetar som systemutvecklare och team lead i ett agilt team som utvecklar och underhåller en webbapplikation. Produkten som företaget tillhandahåller är en integrationsplattform och webbapplikationen som jag och mitt team arbetar med är det primära verktyget för kunden att hantera sina integrationer. Arbetet sker i Visual Studio med bl.a. C# och ASP.NET, och TypeScript och Backbone.js för klientapplikationen. Jag har också arbetat med att vidareutveckla våra externa webbapplikationer, bl.a. genom att implementera OpenID Connect-autentisering via Azure AD B2C.\n", "Url": null}], "education": [{"Area": null, "EndDate": '2008-06-06T00:00:00.0000000', "Courses": null, "Institution": "NTI-gymnasiet, Malmö", "Score": null, "StartDate": '2005-08-22T00:00:00.0000000', "StudyType": "Elprogrammet", "Url": null}, {"Area": null, "EndDate": '2014-01-01T00:00:00.0000000', "Courses": null, "Institution": "Lunds tekniska högskola", "Score": null, "StartDate": '2008-08-25T00:00:00.0000000', "StudyType": "Civilingenjör datateknik", "Url": null}], "skills": [{"Keywords": ["C#", "JavaScript", "TypeScript", "SQL", "Java", "C++", "PHP"], "Level": null, "Name": "Programmeringsspråk"}, {"Keywords": ["ASP.NET", "ASP.NET Core", "ASP.NET MVC", "jQuery", "Backbone.js", "Knockout"], "Level": null, "Name": "Ramverk/bibliotek"}, {"Keywords": ["Git", "TFS", "Subversion", "Windows", "Linux (Ubuntu)", "MSSQL", "MySQL", "Azure DevOps", "Jenkins", "Scrum", "Docker", "CI/CD", "HTML/CSS"], "Level": null, "Name": "Övrigt"}], "languages": [{"Fluency": "Modersmål.", "Language": "Svenska"}, {"Fluency": "Förstår och talar flytande.", "Language": "Engelska"}]}
+{
+  "basicss": {
+    "email": "621212+vikekh@users.noreply.github.com",
+    "image": "https://vikekh.com/images/viktor.jpg",
+    "location": {
+      "address": "Paradisäppelvägen 111",
+      "city": "Ankeborg",
+      "postalCode": "123 45"
+    },
+    "name": "Viktor Ekholm",
+    "phone": "08-400 27 779",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "url": "https://github.com/vikekh",
+        "username": "vikekh"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://linkedin.com/in/viktorekholm",
+        "username": "viktorekholm"
+      }
+    ]
+  },
+  "work": [
+    {
+      "endDate": "2014-03-31T00:00:00",
+      "location": "Lund",
+      "name": "4IT AB",
+      "position": "Systemutvecklare",
+      "startDate": "2012-06-01T00:00:00",
+      "summary": "\nArbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a. Viss kundkontakt var förekommande.\n"
+    },
+    {
+      "endDate": "2013-08-31T00:00:00",
+      "location": "Malmö",
+      "name": "Softhouse Consulting Öresund AB",
+      "position": "Examensarbete",
+      "startDate": "2013-01-01T00:00:00"
+    },
+    {
+      "endDate": "2014-03-31T00:00:00",
+      "location": "Lund",
+      "name": "Lunds tekniska högskola",
+      "position": "Laborationshandledare",
+      "startDate": "2014-01-01T00:00:00"
+    },
+    {
+      "endDate": "2017-07-31T00:00:00",
+      "location": "Göteborg",
+      "name": "Eurostep AB",
+      "position": "Systemutvecklare/konsult",
+      "startDate": "2014-04-01T00:00:00",
+      "summary": "Jag arbetade som konsult in-house mot ett flertal kunder, vissa på annan ort och vissa i utlandet. Min huvudsakliga arbetsuppgift var att implementera en anpassad version av vår egen webbaserade PLM-produkt ShareAspace efter kundens behov. I mitt arbete använde jag mig av bl.a. C#, ASP.NET, MSSQL, JavaScript och jQuery. Arbetet bestod av t.ex. att översätta kundens domän enligt vår PLM-baserade databasmodell, utveckla nya funktioner (applikation och gränssnitt), skriva funktioner för import, export och rapportering, samt integrationer mot andra system.\n"
+    },
+    {
+      "location": "Göteborg",
+      "name": "iCore Solutions AB",
+      "position": "Systemutvecklare",
+      "startDate": "2017-08-01T00:00:00",
+      "summary": "Jag arbetar som systemutvecklare och team lead i ett agilt team som utvecklar och underhåller en webbapplikation. Produkten som företaget tillhandahåller är en integrationsplattform och webbapplikationen som jag och mitt team arbetar med är det primära verktyget för kunden att hantera sina integrationer. Arbetet sker i Visual Studio med bl.a. C# och ASP.NET, och TypeScript och Backbone.js för klientapplikationen. Jag har också arbetat med att vidareutveckla våra externa webbapplikationer, bl.a. genom att implementera OpenID Connect-autentisering via Azure AD B2C.\n"
+    }
+  ],
+  "education": [
+    {
+      "endDate": "2008-06-06T00:00:00",
+      "institution": "NTI-gymnasiet, Malmö",
+      "startDate": "2005-08-22T00:00:00",
+      "studyType": "Elprogrammet"
+    },
+    {
+      "endDate": "2014-01-01T00:00:00",
+      "institution": "Lunds tekniska högskola",
+      "startDate": "2008-08-25T00:00:00",
+      "studyType": "Civilingenjör datateknik"
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [
+        "C#",
+        "JavaScript",
+        "TypeScript",
+        "SQL",
+        "Java",
+        "C++",
+        "PHP"
+      ],
+      "name": "Programmeringsspråk"
+    },
+    {
+      "keywords": [
+        "ASP.NET",
+        "ASP.NET Core",
+        "ASP.NET MVC",
+        "jQuery",
+        "Backbone.js",
+        "Knockout"
+      ],
+      "name": "Ramverk/bibliotek"
+    },
+    {
+      "keywords": [
+        "Git",
+        "TFS",
+        "Subversion",
+        "Windows",
+        "Linux (Ubuntu)",
+        "MSSQL",
+        "MySQL",
+        "Azure DevOps",
+        "Jenkins",
+        "Scrum",
+        "Docker",
+        "CI/CD",
+        "HTML/CSS"
+      ],
+      "name": "Övrigt"
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Modersmål.",
+      "language": "Svenska"
+    },
+    {
+      "fluency": "Förstår och talar flytande.",
+      "language": "Engelska"
+    }
+  ]
+}
