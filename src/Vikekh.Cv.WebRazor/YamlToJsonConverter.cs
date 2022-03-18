@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Options;
 using YamlDotNet.Serialization;
 
 namespace Vikekh.Cv.WebRazor;
@@ -14,9 +13,9 @@ public class YamlToJsonConverter
     public YamlToJsonConverter(IFileProvider fileProvider)
     {
         _fileProvider = fileProvider;
-        _dataPath = @"..\..\data\yaml";
+        _dataPath = @"data/yaml";
 
-        if (!Directory.Exists(_dataPath)) throw new Exception($"Directory `{_dataPath}` does not exist.");
+        //if (!Directory.Exists(_dataPath)) throw new Exception($"Directory `{_dataPath}` does not exist.");
 
         _deserializer = new DeserializerBuilder().Build();
         _serializer = new SerializerBuilder().JsonCompatible().Build();
@@ -26,84 +25,80 @@ public class YamlToJsonConverter
     {
         var dictionary = new Dictionary<string, object?>();
 
-        var directoryContents = _fileProvider.GetDirectoryContents(_dataPath);
-
-        foreach (var path in Directory.GetFiles(_dataPath))
+        foreach (var fileInfo in _fileProvider.GetDirectoryContents(_dataPath))
         {
-            if (!YamlFile.TryCreate(path, out YamlFile? yamlFile)) continue;
-
-            dictionary.Add(yamlFile.Name, yamlFile.Deserialize(_deserializer));
-        }
-
-        foreach (var path in Directory.GetDirectories(_dataPath))
-        {
-            var name = Path.GetFileName(path) ?? throw new Exception("Could not get directory name.");
-            var list = new List<object?>();
-
-            foreach (var filePath in Directory.GetFiles(path))
+            if (fileInfo.IsDirectory)
             {
-                if (!YamlFile.TryCreate(filePath, out YamlFile? yamlFile)) continue;
-
-                list.Add(yamlFile.Deserialize(_deserializer));
+                dictionary.Add(fileInfo.Name, GetList(fileInfo.Name));
             }
+            else
+            {
+                var yamlFile = GetYamlFile(fileInfo);
 
-            dictionary.Add(name, list);
+                if (yamlFile == null) continue;
+
+                dictionary.Add(yamlFile.Name, yamlFile.Deserialize(_deserializer));
+            }
         }
 
         return _serializer.Serialize(dictionary);
     }
 
+    private IEnumerable<object?> GetList(string directoryName)
+    {
+        foreach (var fileInfo in _fileProvider.GetDirectoryContents(Path.Combine(_dataPath, directoryName)))
+        {
+            yield return GetYamlFile(fileInfo)?.Deserialize(_deserializer);
+        }
+    }
+
+    private YamlFile? GetYamlFile(IFileInfo fileInfo)
+    {
+        try
+        {
+            return new YamlFile(fileInfo);
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
     private class YamlFile
     {
-        public YamlFile(string path)
+        public YamlFile(IFileInfo fileInfo)
         {
-            Path = path;
-            FileName = System.IO.Path.GetFileName(path);
-            var parts = FileName.Split('.');
+            FileInfo = fileInfo;
+            
+            if (FileInfo.IsDirectory) throw new NotSupportedException("Cannot be a directory.");
 
-            if (parts.Length < 2 || parts.Length > 3) throw new NotSupportedException("File name does not follow specification.");
+            var nameParts = FileInfo.Name.Split('.');
 
-            Extension = parts[parts.Length - 1];
+            if (nameParts.Length < 2 || nameParts.Length > 3) throw new NotSupportedException("File name does not follow specification.");
+
+            Extension = nameParts[nameParts.Length - 1];
 
             if (!HasYamlExtension) throw new NotSupportedException("File does not have YAML extension.");
 
-            Name = parts[0];
-            Tag = parts.Length == 3 ? parts[1] : null;
+            Name = nameParts[0];
+            Tag = nameParts.Length == 3 ? nameParts[1] : null;
         }
 
         public string Extension { get; private set; }
 
-        public string FileName { get; private set; }
+        public IFileInfo FileInfo { get; private set; }
 
         private bool HasYamlExtension => Extension == "yml" || Extension == "yaml";
 
         public string Name { get; private set; }
 
-        public string Path { get; private set; }
-
         public string? Tag { get; private set; }
 
         public object? Deserialize(IDeserializer deserializer)
         {
-            using (var streamReader = new StreamReader(Path))
+            using (var streamReader = new StreamReader(FileInfo.PhysicalPath))
             {
                 return deserializer.Deserialize(streamReader);
-            }
-        }
-
-        public static bool TryCreate(string path, out YamlFile? yamlFile)
-        {
-            yamlFile = null;
-
-            try
-            {
-                yamlFile = new YamlFile(path);
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
             }
         }
     }
