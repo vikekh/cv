@@ -1,23 +1,54 @@
-﻿using Newtonsoft.Json;
-using Vikekh.Cv.WebRazor.Models;
+﻿using Microsoft.Extensions.FileProviders;
+using Newtonsoft.Json;
+using Vikekh.JsonResume;
 
 namespace Vikekh.Cv.WebRazor.Repositories;
 
-public class ResumeRepository
+public interface IJsonResumeRepository
 {
-    private const string DataDirectory = @"..\..\data";
+    public Models.JsonResume Get();
+}
 
-    public ResumeRepository()
+public class JsonResumeRepository : IJsonResumeRepository
+{
+    private readonly IFileProvider _fileProvider;
+    private readonly IJsonValidator _jsonValidator;
+    private readonly IYamlToJsonConverter _yamlToJsonConverter;
+
+    public JsonResumeRepository(IFileProvider fileProvider)
     {
+        _fileProvider = fileProvider;
     }
 
-    public JsonResume Get()
+    public Models.JsonResume Get()
     {
-        using (var streamReader = File.OpenText(Path.Combine(DataDirectory, "resume.g.json")))
+        var fileInfo = _fileProvider.GetFileInfo("resume.g.json");
+
+        using (var streamReader = File.OpenText(fileInfo.PhysicalPath))
         using (var jsonTextReader = new JsonTextReader(streamReader))
         {
-            var serializer = new JsonSerializer();
-            return serializer.Deserialize<JsonResume>(jsonTextReader);
+            var serializer = new Newtonsoft.Json.JsonSerializer();
+            return serializer.Deserialize<Models.JsonResume>(jsonTextReader);
         }
+    }
+}
+
+public class GeneratedJsonResumeRepository : IJsonResumeRepository
+{
+    private readonly IJsonValidator _jsonValidator;
+    private readonly IYamlToJsonConverter _yamlToJsonConverter;
+
+    public GeneratedJsonResumeRepository(IYamlToJsonConverter yamlToJsonConverter, IJsonValidator jsonValidator)
+    {
+        _yamlToJsonConverter = yamlToJsonConverter;
+        _jsonValidator = jsonValidator;
+    }
+
+    public Models.JsonResume Get()
+    {
+        var jsonString = _yamlToJsonConverter.Convert();
+        _jsonValidator.Validate(jsonString);
+
+        return JsonConvert.DeserializeObject<Models.JsonResume>(jsonString);
     }
 }

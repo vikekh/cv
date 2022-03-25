@@ -22,4 +22,8 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Vikekh.JsonResume\Vikekh.JsonResume.csproj" />
+  </ItemGroup>
+
 </Project>

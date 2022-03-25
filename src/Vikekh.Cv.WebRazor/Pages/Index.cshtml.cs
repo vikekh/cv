@@ -7,19 +7,19 @@ namespace Vikekh.Cv.WebRazor.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private readonly ResumeRepository _resumeRepository;
+        private readonly IJsonResumeRepository _jsonResumeRepository;
 
-        public IndexModel(ILogger<IndexModel> logger, ResumeRepository resumeRepository)
+        public IndexModel(ILogger<IndexModel> logger, IJsonResumeRepository jsonResumeRepository)
         {
             _logger = logger;
-            _resumeRepository = resumeRepository;
+            _jsonResumeRepository = jsonResumeRepository;
         }
 
-        public JsonResume Resume { get; private set; }
+        public Models.JsonResume JsonResume { get; private set; }
 
         public void OnGet()
         {
-            Resume = _resumeRepository.Get();
+            JsonResume = _jsonResumeRepository.Get();
         }
     }
 }

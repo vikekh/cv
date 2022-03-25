@@ -1,0 +1,131 @@
+{
+  "basics": {
+    "name": "Viktor Ekholm test",
+    "image": "https://vikekh.com/images/viktor.jpg",
+    "email": "621212+vikekh@users.noreply.github.com",
+    "phone": "08-400 27 779",
+    "location": {
+      "address": "Paradisäppelvägen 111",
+      "postalCode": "123 45",
+      "city": "Ankeborg"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "vikekh",
+        "url": "https://github.com/vikekh"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "viktorekholm",
+        "url": "https://linkedin.com/in/viktorekholm"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "NTI-gymnasiet, Malmö",
+      "studyType": "Elprogrammet",
+      "startDate": "2005-08-22",
+      "endDate": "2008-06-06"
+    },
+    {
+      "institution": "Lunds tekniska högskola",
+      "studyType": "Civilingenjör datateknik",
+      "startDate": "2008-08-25",
+      "endDate": "2014-01-01"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Svenska",
+      "fluency": "Modersmål."
+    },
+    {
+      "language": "Engelska",
+      "fluency": "Förstår och talar flytande."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programmeringsspråk",
+      "keywords": [
+        "C#",
+        "JavaScript",
+        "TypeScript",
+        "SQL",
+        "Java",
+        "C++",
+        "PHP"
+      ]
+    },
+    {
+      "name": "Ramverk/bibliotek",
+      "keywords": [
+        "ASP.NET",
+        "ASP.NET Core",
+        "ASP.NET MVC",
+        "jQuery",
+        "Backbone.js",
+        "Knockout"
+      ]
+    },
+    {
+      "name": "Övrigt",
+      "keywords": [
+        "Git",
+        "TFS",
+        "Subversion",
+        "Windows",
+        "Linux (Ubuntu)",
+        "MSSQL",
+        "MySQL",
+        "Azure DevOps",
+        "Jenkins",
+        "Scrum",
+        "Docker",
+        "CI/CD",
+        "HTML/CSS"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "name": "4IT AB",
+      "location": "Lund",
+      "position": "Systemutvecklare",
+      "startDate": "2012-06-01",
+      "endDate": "2014-03-31",
+      "summary": "\nArbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a. Viss kundkontakt var förekommande.\n"
+    },
+    {
+      "name": "Softhouse Consulting Öresund AB",
+      "location": "Malmö",
+      "position": "Examensarbete",
+      "startDate": "2013-01-01",
+      "endDate": "2013-08-31"
+    },
+    {
+      "name": "Lunds tekniska högskola",
+      "location": "Lund",
+      "position": "Laborationshandledare",
+      "startDate": "2014-01-01",
+      "endDate": "2014-03-31"
+    },
+    {
+      "name": "Eurostep AB",
+      "location": "Göteborg",
+      "position": "Systemutvecklare/konsult",
+      "startDate": "2014-04-01",
+      "endDate": "2017-07-31",
+      "summary": "Jag arbetade som konsult in-house mot ett flertal kunder, vissa på annan ort och vissa i utlandet. Min huvudsakliga arbetsuppgift var att implementera en anpassad version av vår egen webbaserade PLM-produkt ShareAspace efter kundens behov. I mitt arbete använde jag mig av bl.a. C#, ASP.NET, MSSQL, JavaScript och jQuery. Arbetet bestod av t.ex. att översätta kundens domän enligt vår PLM-baserade databasmodell, utveckla nya funktioner (applikation och gränssnitt), skriva funktioner för import, export och rapportering, samt integrationer mot andra system.\n"
+    },
+    {
+      "name": "iCore Solutions AB",
+      "location": "Göteborg",
+      "position": "Systemutvecklare",
+      "startDate": "2017-08-01",
+      "summary": "Jag arbetar som systemutvecklare och team lead i ett agilt team som utvecklar och underhåller en webbapplikation. Produkten som företaget tillhandahåller är en integrationsplattform och webbapplikationen som jag och mitt team arbetar med är det primära verktyget för kunden att hantera sina integrationer. Arbetet sker i Visual Studio med bl.a. C# och ASP.NET, och TypeScript och Backbone.js för klientapplikationen. Jag har också arbetat med att vidareutveckla våra externa webbapplikationer, bl.a. genom att implementera OpenID Connect-autentisering via Azure AD B2C.\n"
+    }
+  ]
+}

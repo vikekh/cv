@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vikekh.JsonResume", "src\Vikekh.JsonResume\Vikekh.JsonResume.csproj", "{E60B088E-BEE8-4558-AD34-9C2391947C9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,12 +28,17 @@ Global
 		{48B3AA58-6B06-4AFB-9BEB-C81780534594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48B3AA58-6B06-4AFB-9BEB-C81780534594}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48B3AA58-6B06-4AFB-9BEB-C81780534594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60B088E-BEE8-4558-AD34-9C2391947C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60B088E-BEE8-4558-AD34-9C2391947C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60B088E-BEE8-4558-AD34-9C2391947C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60B088E-BEE8-4558-AD34-9C2391947C9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{48B3AA58-6B06-4AFB-9BEB-C81780534594} = {370C7CC2-84DD-41C9-912B-22B13D699B20}
+		{E60B088E-BEE8-4558-AD34-9C2391947C9E} = {370C7CC2-84DD-41C9-912B-22B13D699B20}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32A5582C-760D-42A4-A14A-697862D95626}
