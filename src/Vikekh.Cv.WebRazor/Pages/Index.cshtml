@@ -4,6 +4,71 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="container">
-
+<img src="images/cthulu.png" alt="Photo of Cthulu" id="pic" />
+    
+<div id="contact-info" class="vcard">
+        
+<!-- Microformats! -->
+        
+<h1 class="fn">@Model.JsonResumeViewModel.Name</h1>
+        
+<p>
+    Cell: <span class="tel">@Model.JsonResumeViewModel.PhoneNumber</span><br />
+    Email: <a class="email" href="mailto:@Model.JsonResumeViewModel.Email">@Model.JsonResumeViewModel.Email</a>
+</p>
 </div>
+                
+<div id="objective">
+<p>
+    I am an outgoing and energetic (ask anybody) young professional, seeking a 
+    career that fits my professional skills, personality, and murderous tendencies. 
+    My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
+    I can bring world domination to your organization. 
+</p>
+</div>
+        
+<div class="clear"></div>
+        
+<dl>
+<dd class="clear"></dd>
+            
+<dt>Utbildning</dt>
+<dd>
+	@foreach (var item in @Model.JsonResumeViewModel.EducationItems)
+	{	
+		<h2>@item.Name <span>@item.StartDate.Year-@item.EndDate?.Year</span></h2>
+		<p><strong>Area:</strong> @item.Area</p>
+	}
+</dd>
+
+<dd class="clear"></dd>
+            
+<dt>Kompetenser</dt>
+<dd>
+	@foreach (var item in @Model.JsonResumeViewModel.SkillsItems)
+	{	
+		<h2>@item.Name</h2>
+		<p>@string.Join(", ", item.Keywords)</p>
+	}
+</dd>
+            
+<dd class="clear"></dd>
+            
+<dt>Arbetslivserfarenhet</dt>
+<dd>
+	@foreach (var item in @Model.JsonResumeViewModel.WorkItems)
+	{	
+		<h2>@item.Name <span>@item.Position - @item.Location - @item.StartDate.Year-@item.EndDate?.Year</span></h2>
+		<p>@item.Description</p>
+	}
+</dd>
+            
+<dd class="clear"></dd>
+            
+<dt>Referenser</dt>
+<dd>Lämnas på begäran.</dd>
+            
+<dd class="clear"></dd>
+</dl>
+        
+<div class="clear"></div>

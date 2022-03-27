@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Vikekh.Cv.WebRazor.Models;
 using Vikekh.Cv.WebRazor.Repositories;
+using Vikekh.Cv.WebRazor.ViewModels;
 
 namespace Vikekh.Cv.WebRazor.Pages
 {
@@ -15,11 +16,11 @@ namespace Vikekh.Cv.WebRazor.Pages
             _jsonResumeRepository = jsonResumeRepository;
         }
 
-        public Models.JsonResume JsonResume { get; private set; }
+        public JsonResumeViewModel JsonResumeViewModel { get; private set; }
 
         public void OnGet()
         {
-            JsonResume = _jsonResumeRepository.Get();
+            JsonResumeViewModel = new JsonResumeViewModel(_jsonResumeRepository.Get());
         }
     }
 }
