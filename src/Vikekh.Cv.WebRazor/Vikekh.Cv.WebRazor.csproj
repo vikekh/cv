@@ -26,4 +26,9 @@
     <ProjectReference Include="..\Vikekh.JsonResume\Vikekh.JsonResume.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="$(SolutionDir)data\Yaml\**" CopyToOutputDirectory="PreserveNewest" LinkBase="Yaml\" />
+    <None Include="$(SolutionDir)schema.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.FileProviders;
+﻿using System.Reflection;
+using Microsoft.Extensions.FileProviders;
 using Vikekh.Cv.WebRazor;
 using Vikekh.Cv.WebRazor.Configuration;
 using Vikekh.Cv.WebRazor.Repositories;
@@ -11,15 +12,10 @@ builder.Services.Configure<RuntimeGeneration>(builder.Configuration.GetSection(n
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-var applicationRoot = null as string;
-
-if (applicationRoot == null)
-{
-    applicationRoot = @"C:\Users\Viktor\source\repos\cv";
-}
+var applicationRoot = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
 builder.Services.AddSingleton<IFileProvider>(new PhysicalFileProvider(applicationRoot));
-builder.Services.AddSingleton<IYamlToJsonConverter>(new YamlToJsonConverter(Path.Combine(applicationRoot, "data", "yaml")));
+builder.Services.AddSingleton<IYamlToJsonConverter>(new YamlToJsonConverter(Path.Combine(applicationRoot, "Yaml")));
 builder.Services.AddSingleton<IJsonValidator>(new JsonValidator(Path.Combine(applicationRoot, "schema.json")));
 
 var runtimeGeneration = new RuntimeGeneration();
