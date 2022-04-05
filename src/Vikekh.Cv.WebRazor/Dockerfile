@@ -7,10 +7,11 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Vikekh.Cv.WebRazor/Vikekh.Cv.WebRazor.csproj", "Vikekh.Cv.WebRazor/"]
-RUN dotnet restore "Vikekh.Cv.WebRazor/Vikekh.Cv.WebRazor.csproj"
+COPY ["src/Vikekh.Cv.WebRazor/Vikekh.Cv.WebRazor.csproj", "src/Vikekh.Cv.WebRazor/"]
+COPY ["src/Vikekh.JsonResume/Vikekh.JsonResume.csproj", "src/Vikekh.JsonResume/"]
+RUN dotnet restore "src/Vikekh.Cv.WebRazor/Vikekh.Cv.WebRazor.csproj"
 COPY . .
-WORKDIR "/src/Vikekh.Cv.WebRazor"
+WORKDIR "/src/src/Vikekh.Cv.WebRazor"
 RUN dotnet build "Vikekh.Cv.WebRazor.csproj" -c Release -o /app/build
 
 FROM build AS publish
