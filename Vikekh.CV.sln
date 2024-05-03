@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vikekh.Cv.Web", "src\Vikekh.Cv.Web\Vikekh.Cv.Web.csproj", "{02DF594E-5777-4FD5-9111-49F48FFE0821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vikekh.CV.Web", "src\Vikekh.CV.Web\Vikekh.CV.Web.csproj", "{02DF594E-5777-4FD5-9111-49F48FFE0821}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{61AC9D5A-33B0-47FD-AD2D-28E4AAD9EE33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0F58EE86-46AF-4AEB-8564-1A923DCFD3F7}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +27,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02DF594E-5777-4FD5-9111-49F48FFE0821} = {61AC9D5A-33B0-47FD-AD2D-28E4AAD9EE33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0DED047-07A1-4580-BD5B-C41B480A711F}
