@@ -9,17 +9,17 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Vikekh.Cv.Web/Vikekh.Cv.Web.csproj", "Vikekh.Cv.Web/"]
-RUN dotnet restore "./Vikekh.Cv.Web/Vikekh.Cv.Web.csproj"
+COPY ["Vikekh.CV.Web/Vikekh.CV.Web.csproj", "Vikekh.CV.Web/"]
+RUN dotnet restore "./Vikekh.CV.Web/Vikekh.CV.Web.csproj"
 COPY . .
-WORKDIR "/src/Vikekh.Cv.Web"
-RUN dotnet build "./Vikekh.Cv.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/Vikekh.CV.Web"
+RUN dotnet build "./Vikekh.CV.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Vikekh.Cv.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Vikekh.CV.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Vikekh.Cv.Web.dll"]
+ENTRYPOINT ["dotnet", "Vikekh.CV.Web.dll"]

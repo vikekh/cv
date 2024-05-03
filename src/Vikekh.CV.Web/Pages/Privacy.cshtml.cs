@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Vikekh.Cv.Web.Pages
+namespace Vikekh.CV.Web.Pages
 {
     public class PrivacyModel : PageModel
     {
