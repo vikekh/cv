@@ -5,9 +5,9 @@
 //----------------------
 
 
-namespace Vikekh.CV.Web.Models
+namespace Vikekh.CV.Core.Models
 {
-    #pragma warning disable // Disable all warnings
+#pragma warning disable // Disable all warnings
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.0.0.0 (Newtonsoft.Json v13.0.0.0)")]
     public partial class JsonResume

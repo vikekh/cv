@@ -14,12 +14,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Vikekh.JsonSchemaCSharpGenerator\Vikekh.JsonSchemaCSharpGenerator.csproj" />
+		<ProjectReference Include="..\Vikekh.CV.Core\Vikekh.CV.Core.csproj" />
+		<ProjectReference Include="..\Vikekh.JsonSchemaCSharpGenerator\Vikekh.JsonSchemaCSharpGenerator.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Interfaces\" />
-	  <Folder Include="Services\" />
+		<Folder Include="Services\" />
 	</ItemGroup>
 
 	<Target Name="GenerateJsonResumeModels" BeforeTargets="Build">
