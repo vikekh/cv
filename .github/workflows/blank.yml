@@ -40,7 +40,7 @@ jobs:
           token: ${{ secrets.TOKEN }}
           gist_id: 51c60176d75ecc745f99b73d64685a80
           gist_file_name: resume.json
-          file_path: ${{ steps.converter.outputs.result-path }}
+          file_path: ${{ steps.converter.outputs.result-path }}resume.sv.json
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
