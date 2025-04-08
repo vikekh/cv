@@ -30,6 +30,9 @@ jobs:
         with:
           source-pattern: "resume*.yaml"
           to: "json"
+          
+      - name: List resulting files
+        run: ls ${{ steps.converter.outputs.result-path }}
       
       - name: Update Resume Gist
         uses: exuanbo/actions-deploy-gist@v1
