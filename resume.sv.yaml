@@ -4,14 +4,14 @@ basics:
   name: "Viktor Ekholm"
   # label:
   image: https://vikekh.com/images/viktor.jpg
-  email: 621212+vikekh@users.noreply.github.com
+  email: 0xogt63ep@mozmail.com
   phone: 08-400 27 779
   # url:
   # summary:
   location:
-    address: Paradisäppelvägen 111
-    postalCode: 123 45
-    city: Ankeborg
+    address: Köpenhamnsvägen 6D lgh 1102
+    postalCode: 217 43
+    city: Malmö
     # countryCode:
     # region:
   profiles:
@@ -55,28 +55,32 @@ skills:
   - name: Ramverk/bibliotek
     # level:
     keywords:
+      - .NET
+      - .NET Framework
       - ASP.NET
       - ASP.NET Core
       - ASP.NET MVC
+      - Blazor
+      - React
       - jQuery
       - Backbone.js
-      - Knockout
   - name: Övrigt
     # level:
     keywords:
       - Git
-      - TFS
-      - Subversion
       - Windows
-      - Linux (Ubuntu)
+      - Azure
       - MSSQL
-      - MySQL
-      - Azure DevOps
-      - Jenkins
-      - Scrum
       - Docker
       - CI/CD
       - HTML/CSS
+      - Linux (Ubuntu)
+      - Azure DevOps
+      - MySQL
+      - Jenkins
+      - Scrum
+      - TFS
+      - Subversion
 work:
   - name: 4IT AB
     location: Lund
