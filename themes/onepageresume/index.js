@@ -1,4 +1,15 @@
-exports.render = ({ basics }) => `
+function getIconClass(network) {
+    switch(network.toLowerCase()) {
+			case 'github':
+				return 'fab fa-github';
+			case 'json resume':
+				return 'fab fa-file';
+			case 'linkedin':
+				return 'fab fa-linkedin';
+		}
+}
+
+exports.render = (resume) => `
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -7,7 +18,7 @@ exports.render = ({ basics }) => `
 <head>
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-     <title>One Page Resume</title>
+     <title>${resume.basics.name}</title>
 
      <style type="text/css">
         * { margin: 0; padding: 0; }
@@ -28,50 +39,77 @@ exports.render = ({ basics }) => `
         dd { width: 600px; float: right; }
         dd.clear { float: none; margin: 0; height: 15px; }
      </style>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
     <div id="page-wrap">
     
-        <img src="images/cthulu.png" alt="Photo of Cthulu" id="pic" />
+        <img src="${resume.basics.image}" alt="${resume.basics.name}" id="pic" />
     
         <div id="contact-info" class="vcard">
         
             <!-- Microformats! -->
         
-            <h1 class="fn">C'thulhu</h1>
+            <h1 class="fn">${resume.basics.name}</h1>
         
             <p>
-                Cell: <span class="tel">555-666-7777</span><br />
-                Email: <a class="email" href="mailto:greatoldone@lovecraft.com">greatoldone@lovecraft.com</a>
+                <span class="fab fa-envelope fa-fw">
+                    <a class="email" href="mailto:${resume.basics.email}">${resume.basics.email}</a>
+                </span>
             </p>
+
+            <ul id="profiles">
+                ${resume.basics.profiles
+                    .map(profile => `
+                <li>
+                    <div class="contact-item tooltip">
+                        <div class="icon pull-left text-center">
+                            <a href="${profile.url}" target="_blank">
+                                <span class="${getIconClass(profile.network)} fa-fw">
+                                    <span class="tooltiptext">
+                                        ${profile.username}
+                                   </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>`)
+                    .join('')}
+            </ul>
         </div>
-                
+        
+        ${resume.basics.summary ? `
         <div id="objective">
             <p>
-                I am an outgoing and energetic (ask anybody) young professional, seeking a 
-                career that fits my professional skills, personality, and murderous tendencies. 
-                My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
-                I can bring world domination to your organization. 
+                ${resume.basics.summary}
             </p>
-        </div>
+        </div>` : ''}
         
         <div class="clear"></div>
         
         <dl>
             <dd class="clear"></dd>
             
-            <dt>Education</dt>
+            <dt>Utbildning</dt>
+            ${resume.education
+                .map(education => `
             <dd>
-                <h2>Withering Madness University - Planet Vhoorl</h2>
-                <p><strong>Major:</strong> Public Relations<br />
-                   <strong>Minor:</strong> Scale Tending</p>
-            </dd>
+                <h2>
+                    ${education.institution}
+                    <span>
+                        ${education.startDate} -
+                        ${education.endDate ? education.endDate : ''}
+                    </span>
+                </h2>
+                <p><strong>${education.studyType}</strong> ${education.area ? education.area : ''}
+            </dd>`)
+                .join('')}
             
             <dd class="clear"></dd>
             
-            <dt>Skills</dt>
+            <dt>Kompetenser</dt>
             <dd>
                 <h2>Office skills</h2>
                 <p>Office and records management, database administration, event organization, customer support, travel coordination</p>
@@ -82,32 +120,34 @@ exports.render = ({ basics }) => `
             
             <dd class="clear"></dd>
             
-            <dt>Experience</dt>
+            <dt>Erfarenhet</dt>
+            ${resume.work
+                .map(work => `
             <dd>
-                <h2>Doomsday Cult <span>Leader/Overlord - Baton Rogue, LA - 1926-2010</span></h2>
+                <h2>
+                    ${work.name}, ${work.location}
+                    <span>
+                        ${work.startDate} -
+                        ${work.endDate ? work.endDate : ''}
+                    </span>
+                </h2>
+                <p>
+                    <strong>${work.position}</strong>
+                </p>
+                ${work.summary ? `<p>${work.summary.replace('\\\\', '<br />').replace('<br /><br />', '</p><p>')}</p>` : ''}
+
+                ${work.highlights && work.highlights.length > 0 ? `
                 <ul>
-                    <li>Inspired and won highest peasant death competition among servants</li>
-                    <li>Helped coordinate managers to grow cult following</li>
-                    <li>Provided untimely deaths to all who opposed</li>
+                    ${work.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
                 </ul>
-                
-                <h2>The Watering Hole <span>Bartender/Server - Milwaukee, WI - 2009</span></h2>
-                <ul>
-                    <li>Worked on grass-roots promotional campaigns</li>
-                    <li>Reduced theft and property damage percentages</li>
-                    <li>Janitorial work, Laundry</li>
-                </ul> 
-            </dd>
+                ` : ''}
+            </dd>`)
+                .join('')}
             
             <dd class="clear"></dd>
             
-            <dt>Hobbies</dt>
-            <dd>World Domination, Deep Sea Diving, Murder Most Foul</dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>References</dt>
-            <dd>Available on request</dd>
+            <dt>Referenser</dt>
+            <dd>Referenser lämnas på begäran.</dd>
             
             <dd class="clear"></dd>
         </dl>

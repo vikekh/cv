@@ -1,0 +1,6 @@
+{
+  "yaml-plus-json": {
+    "keepOriginalFiles": "always",
+    "overwriteExistentFiles": "always"
+  }
+}

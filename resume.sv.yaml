@@ -3,14 +3,14 @@
 basics:
   name: "Viktor Ekholm"
   # label:
-  image: https://vikekh.com/images/viktor.jpg
+  image: "./images/23_40_Icore_portra╠êtt5805 crop.jpg"
   email: 0xogt63ep@mozmail.com
-  phone: 08-400 27 779
+  # phone: 
   # url:
   # summary:
   location:
-    address: Köpenhamnsvägen 6D lgh 1102
-    postalCode: 217 43
+    # address: 
+    # postalCode: 
     city: Malmö
     # countryCode:
     # region:
@@ -18,22 +18,25 @@ basics:
     - network: GitHub
       username: vikekh
       url: https://github.com/vikekh
+    - network: JSON Resume
+      username: vikekh.json
+      url: https://registry.jsonresume.org/vikekh.json
     - network: LinkedIn
       username: viktorekholm
       url: https://linkedin.com/in/viktorekholm
 education:
+  - institution: Lunds tekniska högskola, Lund
+    area: Inriktning programvara.
+    studyType: Civilingenjör datateknik.
+    startDate: 2008-08-25
+    endDate: 2014-01-01
+    # gpa:
+    # courses:
   - institution: NTI-gymnasiet, Malmö
     # area:
     studyType: Elprogrammet
     startDate: 2005-08-22
     endDate: 2008-06-06
-    # gpa:
-    # courses:
-  - institution: Lunds tekniska högskola
-    # area:
-    studyType: Civilingenjör datateknik
-    startDate: 2008-08-25
-    endDate: 2014-01-01
     # gpa:
     # courses:
 languages:
@@ -46,9 +49,10 @@ skills:
     # level:
     keywords:
       - C#
-      - JavaScript
       - TypeScript
+      - JavaScript
       - SQL
+      - Bicep
       - Java
       - C++
       - PHP
@@ -61,7 +65,7 @@ skills:
       - ASP.NET Core
       - ASP.NET MVC
       - Blazor
-      - React
+      - Next.js/React
       - jQuery
       - Backbone.js
   - name: Övrigt
@@ -70,47 +74,37 @@ skills:
       - Git
       - Windows
       - Azure
+      - Azure DevOps
       - MSSQL
       - Docker
       - CI/CD
+      - OpenID Connect/OAuth
       - HTML/CSS
-      - Linux (Ubuntu)
-      - Azure DevOps
+      - Linux
       - MySQL
       - Jenkins
       - Scrum
       - TFS
       - Subversion
 work:
-  - name: 4IT AB
-    location: Lund
+  - name: iCore Solutions AB
+    location: Göteborg
     # description:
     position: Systemutvecklare
     # url:
-    startDate: 2012-06-01
-    endDate: 2014-03-31
+    startDate: 2017-08-01
+    # endDate:
     summary: >
-      Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a.
-      Viss kundkontakt var förekommande.
-    # highlights:
-  - name: Softhouse Consulting Öresund AB
-    location: Malmö
-    # description:
-    position: Examensarbete
-    # url:
-    startDate: 2013-01-01
-    endDate: 2013-08-31
-    # summary:
-    # highlights:
-  - name: Lunds tekniska högskola
-    location: Lund
-    # description:
-    position: Laborationshandledare
-    # url:
-    startDate: 2014-01-01
-    endDate: 2014-03-31
-    # summary:
-    # highlights:
+      Jag arbetar som systemutvecklare och har under min tid här jobbat i många team och konstellationer.
+      De senaste åren jag arbetat med att nyutveckla ett flertal micro frontends och services för att leverera tjänster med UX-fokus för kunder och konsulter mot vår moln- och on-prem-baserade integrationsplattform.
+      Applikationerna har byggts med senaste ASP.NET Core i backend och med Blazor och i vissa fall Next.js/React som frontend.
+      Vi deployar vår egen infrastruktur, resurser och uppdateringar på applikationer i Azure enligt DevOps med Docker, Bicep och Azure DevOps.\\\\
+      Under tidigare år arbetade jag med underhåll och nyutveckling vårt existerande webbapplikation för att administrera vår plattform för integrationslösningar.
+      Nyutvecklingen som gjordes var främst för att supportera flytten av vår plattform till molnet med bl.a. OpenID Connect/OAuth-störekommande.
+      Backend är en ASP.NET MVC-applikation som pratar med en Windows-service mot plattformen, medan frontend är en tidig SPA-applikation med Backbone.js som bas.
+    highlights:
+     - hej
+     - hej
   - name: Eurostep AB
     location: Göteborg
     # description:
@@ -124,16 +118,32 @@ work:
       I mitt arbete använde jag mig av bl.a. C#, ASP.NET, MSSQL, JavaScript och jQuery.
       Arbetet bestod av t.ex. att översätta kundens domän enligt vår PLM-baserade databasmodell, utveckla nya funktioner (applikation och gränssnitt), skriva funktioner för import, export och rapportering, samt integrationer mot andra system.
     # highlights:
-  - name: iCore Solutions AB
-    location: Göteborg
+  - name: 4IT AB
+    location: Lund
     # description:
     position: Systemutvecklare
     # url:
-    startDate: 2017-08-01
-    # endDate:
+    startDate: 2012-06-01
+    endDate: 2014-03-31
     summary: >
-      Jag arbetar som systemutvecklare och team lead i ett agilt team som utvecklar och underhåller en webbapplikation.
-      Produkten som företaget tillhandahåller är en integrationsplattform och webbapplikationen som jag och mitt team arbetar med är det primära verktyget för kunden att hantera sina integrationer.
-      Arbetet sker i Visual Studio med bl.a. C# och ASP.NET, och TypeScript och Backbone.js för klientapplikationen.
-      Jag har också arbetat med att vidareutveckla våra externa webbapplikationer, bl.a. genom att implementera OpenID Connect-autentisering via Azure AD B2C.
+      Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a.
+      Viss kundkontakt var förekommande.
+    # highlights:
+  - name: Lunds tekniska högskola
+    location: Lund
+    # description:
+    position: Laborationshandledare
+    # url:
+    startDate: 2014-01-01
+    endDate: 2014-03-31
+    # summary:
+    # highlights:
+  - name: Softhouse Consulting Öresund AB
+    location: Malmö
+    # description:
+    position: Examensarbete
+    # url:
+    startDate: 2013-01-01
+    endDate: 2013-08-31
+    # summary:
     # highlights:
