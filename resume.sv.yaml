@@ -94,17 +94,12 @@ work:
     # url:
     startDate: 2017-08-01
     # endDate:
-    summary: >
-      Jag arbetar som systemutvecklare och har under min tid här jobbat i många team och konstellationer.
-      De senaste åren jag arbetat med att nyutveckla ett flertal micro frontends och services för att leverera tjänster med UX-fokus för kunder och konsulter mot vår moln- och on-prem-baserade integrationsplattform.
-      Applikationerna har byggts med senaste ASP.NET Core i backend och med Blazor och i vissa fall Next.js/React som frontend.
-      Vi deployar vår egen infrastruktur, resurser och uppdateringar på applikationer i Azure enligt DevOps med Docker, Bicep och Azure DevOps.\\\\
-      Under tidigare år arbetade jag med underhåll och nyutveckling vårt existerande webbapplikation för att administrera vår plattform för integrationslösningar.
-      Nyutvecklingen som gjordes var främst för att supportera flytten av vår plattform till molnet med bl.a. OpenID Connect/OAuth-störekommande.
-      Backend är en ASP.NET MVC-applikation som pratar med en Windows-service mot plattformen, medan frontend är en tidig SPA-applikation med Backbone.js som bas.
+    # summary:
     highlights:
-     - hej
-     - hej
+     - Utvecklade många micro frontends och services i med senaste ASP.NET Core och Blazor och med lite Next.js/React.
+     - Deployade och ägde egen infrastruktur, resurser och uppdateringar på applikationer i Azure med Docker, Bicep (IaC) och Azure DevOps (CI/CD) enligt DevOps.
+     - Underhöll en äldre ASP.NET MVC SPA-applikation och implementerade funktionalitet för flytt av vår plattform till Azure, bl.a. OpenID Connect.
+     - Arbetade i många teamkonstellationer med nära samarbete med utvecklare, UX-designers och produktägare under Scrumliknande former.
   - name: Eurostep AB
     location: Göteborg
     # description:
@@ -112,12 +107,12 @@ work:
     # url:
     startDate: 2014-04-01
     endDate: 2017-07-31
-    summary: >
-      Jag arbetade som konsult in-house mot ett flertal kunder, vissa på annan ort och vissa i utlandet.
-      Min huvudsakliga arbetsuppgift var att implementera en anpassad version av vår egen webbaserade PLM-produkt ShareAspace efter kundens behov.
-      I mitt arbete använde jag mig av bl.a. C#, ASP.NET, MSSQL, JavaScript och jQuery.
-      Arbetet bestod av t.ex. att översätta kundens domän enligt vår PLM-baserade databasmodell, utveckla nya funktioner (applikation och gränssnitt), skriva funktioner för import, export och rapportering, samt integrationer mot andra system.
-    # highlights:
+    # summary:
+    highlights:
+      - Implementerade anpassade och väldigt olika versioner av vår ASP.NET-baserade PLM-produkt ShareAspace efter kundens behov.
+      - Kommunicerade och arbetade nära med kunder i Göteborg och på andra orter i Sverige eller i utlandet där regelbundna kundbesök var förekommande.
+      - Arbetade med översättning av kundens domän till vår PLM-baserade databasmodell, genomfört integrationer mot andra system, samt skrivit funktioner för import, export och rapportering.
+      - Hjälpte till att utveckla en ny version av ShareAspace som byggdes med en mycket tidig version av .NET Core.
   - name: 4IT AB
     location: Lund
     # description:
@@ -125,10 +120,10 @@ work:
     # url:
     startDate: 2012-06-01
     endDate: 2014-03-31
-    summary: >
-      Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med C#, ASP.NET MVC, JavaScript och jQuery, bl.a.
-      Viss kundkontakt var förekommande.
-    # highlights:
+    # summary:
+    highlights:
+      - Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med bl.a. C#, ASP.NET MVC, JavaScript och jQuery.
+      - I mitt arbete var en del kundkontakt och besök hos dem förekommande.
   - name: Lunds tekniska högskola
     location: Lund
     # description:
