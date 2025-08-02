@@ -26,8 +26,8 @@ basics:
       url: https://linkedin.com/in/viktorekholm
 education:
   - institution: Lunds tekniska högskola, Lund
-    area: Inriktning programvara.
-    studyType: Civilingenjör datateknik.
+    area: Programvara
+    studyType: Civilingenjör datateknik
     startDate: 2008-08-25
     endDate: 2014-01-01
     # gpa:

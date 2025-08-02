@@ -3,7 +3,7 @@ function getIconClass(network) {
 			case 'github':
 				return 'fab fa-github';
 			case 'json resume':
-				return 'fab fa-file';
+				return 'far fa-file';
 			case 'linkedin':
 				return 'fab fa-linkedin';
 		}
@@ -29,10 +29,10 @@ exports.render = (resume) => `
         h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
         h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
         h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-        p { margin: 0 0 16px 0; }
+        p { font-family: Georgia; margin: 0 0 16px 0; }
         a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
         a:hover { border-bottom-style: solid; color: black; }
-        ul { margin: 0 0 32px 17px; }
+        ul { margin: 0 0 32px 17px; font-family: Georgia; }
         #objective { width: 500px; float: left; }
         #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
         dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
@@ -55,29 +55,27 @@ exports.render = (resume) => `
             <h1 class="fn">${resume.basics.name}</h1>
         
             <p>
-                <span class="fab fa-envelope fa-fw">
+                ${resume.basics.location && resume.basics.location.city ? `
+                <span class="fas fa-map-pin">${resume.basics.location.city}<span>`
+                    : ''}
+                ${resume.basics.email ? `
+                <span class="fas fa-envelope">
                     <a class="email" href="mailto:${resume.basics.email}">${resume.basics.email}</a>
-                </span>
+                </span>` : ''}
             </p>
 
-            <ul id="profiles">
+            <div id="profiles">
+                <p>
                 ${resume.basics.profiles
                     .map(profile => `
-                <li>
-                    <div class="contact-item tooltip">
-                        <div class="icon pull-left text-center">
-                            <a href="${profile.url}" target="_blank">
-                                <span class="${getIconClass(profile.network)} fa-fw">
-                                    <span class="tooltiptext">
-                                        ${profile.username}
-                                   </span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </li>`)
-                    .join('')}
-            </ul>
+                    <a href="${profile.url}" target="_blank">
+                        <span class="${getIconClass(profile.network)}">
+                            ${profile.username}
+                        </span>
+                    </a>`)
+                    .join(' ')}
+                </p>
+            </div>
         </div>
         
         ${resume.basics.summary ? `
@@ -90,34 +88,6 @@ exports.render = (resume) => `
         <div class="clear"></div>
         
         <dl>
-            <dd class="clear"></dd>
-            
-            <dt>Utbildning</dt>
-            ${resume.education
-                .map(education => `
-            <dd>
-                <h2>
-                    ${education.institution}
-                    <span>
-                        ${education.startDate} -
-                        ${education.endDate ? education.endDate : ''}
-                    </span>
-                </h2>
-                <p><strong>${education.studyType}</strong> ${education.area ? education.area : ''}
-            </dd>`)
-                .join('')}
-            
-            <dd class="clear"></dd>
-            
-            <dt>Kompetenser</dt>
-            <dd>
-                <h2>Office skills</h2>
-                <p>Office and records management, database administration, event organization, customer support, travel coordination</p>
-                
-                <h2>Computer skills</h2>
-                <p>Microsoft productivity software (Word, Excel, etc), Adobe Creative Suite, Windows</p>
-            </dd>
-            
             <dd class="clear"></dd>
             
             <dt>Erfarenhet</dt>
@@ -143,6 +113,37 @@ exports.render = (resume) => `
                 ` : ''}
             </dd>`)
                 .join('')}
+            
+            <dd class="clear"></dd>
+            
+            <dt>Utbildning</dt>
+            ${resume.education
+                .map(education => `
+            <dd>
+                <h2>
+                    ${education.institution}
+                    <span>
+                        ${education.startDate} -
+                        ${education.endDate ? education.endDate : ''}
+                    </span>
+                </h2>
+                <p>
+                    <strong>${education.studyType ? education.studyType + (education.area ? ', ' + education.area : '') : ''}</strong>
+                </p>
+            </dd>`)
+                .join('')}
+            
+            <dd class="clear"></dd>
+            
+            <dt>Kompetenser</dt>
+            <dd>
+                ${resume.skills ? resume.skills.map(skills => `
+                <h2>${skills.name}</h2>
+                <p>
+                    ${skills.keywords ? skills.keywords.join(', ') : ''}
+                </p>`)
+                .join('') : ''}
+            </dd>
             
             <dd class="clear"></dd>
             

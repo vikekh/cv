@@ -5,11 +5,7 @@
     "start": "node ./scripts/export.js"
   },
   "dependencies": {
-    "jsonresume-theme-even": "^0.23.0",
     "jsonresume-theme-local-onepageresume": "file:./themes/onepageresume",
-    "jsonresume-theme-onepageresume": "^0.0.6",
-    "jsonresume-theme-onepageresume-alt": "^0.0.1",
-    "jsonresume-theme-onepageresumefixed": "^0.0.3",
     "puppeteer": "^24.10.2",
     "resumed": "^6.0.0"
   }
