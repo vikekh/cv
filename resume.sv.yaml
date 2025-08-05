@@ -96,7 +96,7 @@ work:
     # endDate:
     # summary:
     highlights:
-     - Utvecklade många micro frontends och services i med senaste ASP.NET Core och Blazor och med lite Next.js/React.
+     - Utvecklade många micro frontends och services med senaste ASP.NET Core och Blazor och med lite Next.js/React.
      - Deployade och ägde egen infrastruktur, resurser och uppdateringar på applikationer i Azure med Docker, Bicep (IaC) och Azure DevOps (CI/CD) enligt DevOps.
      - Underhöll en äldre ASP.NET MVC SPA-applikation och implementerade funktionalitet för flytt av vår plattform till Azure, bl.a. OpenID Connect.
      - Arbetade i många teamkonstellationer med nära samarbete med utvecklare, UX-designers och produktägare under Scrumliknande former.
@@ -123,7 +123,7 @@ work:
     # summary:
     highlights:
       - Arbetade med nyutveckling och underhåll av webbapplikationer riktade mot BI och HR byggda med bl.a. C#, ASP.NET MVC, JavaScript och jQuery.
-      - I mitt arbete var en del kundkontakt och besök hos dem förekommande.
+      - I mitt arbete var en del kundkontakt och besök hos kunder förekommande.
   - name: Lunds tekniska högskola
     location: Lund
     # description:

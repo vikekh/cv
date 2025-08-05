@@ -38,6 +38,9 @@ exports.render = (resume) => `
         dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
         dd { width: 600px; float: right; }
         dd.clear { float: none; margin: 0; height: 15px; }
+        .item { break-inside: avoid;}
+        .icon .icon-text { font: 16px Helvetica, Sans-Serif; line-height: 24px; }
+        a .icon { color: #000 !important; text-decoration: none; }
      </style>
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -56,12 +59,16 @@ exports.render = (resume) => `
         
             <p>
                 ${resume.basics.location && resume.basics.location.city ? `
-                <span class="fas fa-map-pin">${resume.basics.location.city}<span>`
+                <span class="icon fas fa-map-pin">
+                    <span class="icon-text">${resume.basics.location.city}<span>
+                </span>`
                     : ''}
                 ${resume.basics.email ? `
-                <span class="fas fa-envelope">
-                    <a class="email" href="mailto:${resume.basics.email}">${resume.basics.email}</a>
-                </span>` : ''}
+                <a href="mailto:${resume.basics.email}">
+                    <span class="icon fas fa-envelope">
+                        <span class="icon-text">${resume.basics.email}</span>
+                    </span>
+                </a>` : ''}
             </p>
 
             <div id="profiles">
@@ -69,8 +76,8 @@ exports.render = (resume) => `
                 ${resume.basics.profiles
                     .map(profile => `
                     <a href="${profile.url}" target="_blank">
-                        <span class="${getIconClass(profile.network)}">
-                            ${profile.username}
+                        <span class="icon ${getIconClass(profile.network)}">
+                            <span class="icon-text">${profile.username}</span>
                         </span>
                     </a>`)
                     .join(' ')}
@@ -93,7 +100,7 @@ exports.render = (resume) => `
             <dt>Erfarenhet</dt>
             ${resume.work
                 .map(work => `
-            <dd>
+            <dd class="item">
                 <h2>
                     ${work.name}, ${work.location}
                     <span>
@@ -148,7 +155,9 @@ exports.render = (resume) => `
             <dd class="clear"></dd>
             
             <dt>Referenser</dt>
-            <dd>Referenser lämnas på begäran.</dd>
+            <dd>
+                <p>Referenser lämnas på begäran.</p>
+            </dd>
             
             <dd class="clear"></dd>
         </dl>
