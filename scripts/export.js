@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs'
-import * as theme from 'jsonresume-theme-local-onepageresume'
+// import * as theme from 'jsonresume-theme-local-onepageresume'
+import * as theme from 'jsonresume-theme-vikekh'
 import puppeteer from 'puppeteer'
 import { render } from 'resumed'
 

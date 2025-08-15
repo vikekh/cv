@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "jsonresume-theme-local-onepageresume": "file:./themes/onepageresume",
+    "jsonresume-theme-vikekh": "file:./themes/vikekh",
     "puppeteer": "^24.10.2",
     "resumed": "^6.0.0"
   }

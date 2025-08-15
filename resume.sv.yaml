@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json
 
 basics:
-  name: "Viktor Ekholm"
+  name: Viktor Ekholm
   # label:
   image: "./images/23_40_Icore_portra╠êtt5805 crop.jpg"
   email: 0xogt63ep@mozmail.com
@@ -26,8 +26,8 @@ basics:
       url: https://linkedin.com/in/viktorekholm
 education:
   - institution: Lunds tekniska högskola, Lund
-    area: Programvara
-    studyType: Civilingenjör datateknik
+    area: Datateknik
+    studyType: Civilingenjör
     startDate: 2008-08-25
     endDate: 2014-01-01
     # gpa:
